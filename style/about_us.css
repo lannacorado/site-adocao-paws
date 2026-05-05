@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--cinza);
+    color: #393833;
+    font-size: 16px;
+}
+
+/*Ele serve principalmente para criar variáveis CSS.*/
+:root{
+    --cinza-forte: #D4D3D3;  
+    --cinza: #F5F5F5;  
+    --branco: #ffffff;         
+    --marrom-forte: #393833;    
+    --laranja: #FF8740;   
+}
+
+header{
+    background-color: var(--cinza-forte);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    border: solid orange;
+}
+
+.logo{ 
+    display: flex; 
+    align-items: center; 
+    font-weight: 700; 
+    font-size: 24px; 
+    color: var(--marrom-escuro);
+    border: solid orange;
+}
+
+.logo img { 
+    /* Troque o 40px pelo tamanho que preferir */
+    height: 80px; 
+    /* Use width: auto para a imagem não achatar */
+    width: auto; 
+    margin-right: 10px; 
+    /* Garante que a imagem se comporte bem */
+    object-fit: contain; 
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: var(--marrom-escuro);
+    margin: 0 15px;
+    font-weight: 600;
+}
+
+.headerButtons .buttonsDoe, .headerButtons .buttonsEntrar {
+    background-color: var(--laranja);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/*.about_us{
+}*/
+
+.content_about_us{
+    display: flex;
+    justify-content: space-between;
+    padding: 4% 10% 0 10%;
+}
+
+/*.we_are{
+
+}*/
+
+.we_are h1{
+    font-weight: 700;
+    font-size: 64;
+    padding-bottom: 15px;
+}
+
+.we_are p{
+    width: 800px;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.content_mission{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_mission{
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: solid #FF8740;
+}
+
+.footer{
+    background-color: var(--marrom-forte);
+}
+
+.footer2{
+    display: flex;
+    gap: 100px;
+    padding: 1.5% 0 0.4% 10%;
+    color: var(--cinza);
+}
+
+.footerLogo img{ 
+    width: 100px;
+}
+
+.footerColumn{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footerColumn p{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cinza);
+}
