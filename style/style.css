@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--cinza);
+    color: var(--marrom-forte);
+    font-size: 16px;
+}
+
+/*Ele serve principalmente para criar variáveis CSS.*/
+:root{
+    --verde-claro: #8FAE9E;  
+    --cinza: #F5F5F5;  
+    --branco: #ffffff;         
+    --marrom-forte: #393833;    
+    --azul-forte: #0f6c81;   
+}
+
+.buttons .buttonDoe, .buttons .buttonEntrar, .buttons .buttonAdote, .buttons .buttonApadrinhe{
+    background-color: var(--azul-forte);
+    color: var(--branco);
+    padding: 3px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 60%;
+    font-weight: 600;
+    display: inline-block;
+}
+
+header{
+    background-color: var(--verde-claro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4% 10%;
+    position: relative; /* para aparecer a sombra do header*/
+    z-index: 1000;
+    box-shadow: 10px 0px 5px rgb(0, 0, 0, 0.20);
+}
+
+.logo img{ 
+    height: 45px; 
+    width: auto; 
+    object-fit: contain; 
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: var(--marrom-escuro);
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 90%;
+}
+
+.Carrosel{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 1% 0;
+    padding: 4% 3% 4% 3%;
+    background-color: var(--verde-claro);
+}
+
+.carroselInfo{
+    width: 45%;
+    height: auto;
+}
+
+.carroselInfo h1{
+    font-weight: 700;
+    font-size: 200%;
+    padding-bottom: 1.5%;
+}
+
+.carroselImg img{
+    width: 60%;
+    height: auto;
+}
+
+.Passos{
+    text-align: center;
+    width: 100%;
+    padding: 2% 3% 2% 3%;
+    margin: 1%;
+}
+
+.Passos h1{
+    font-weight: 700;
+    font-size: 200%;
+    padding-bottom: 1%;
+}
+
+.Passos p{
+    font-weight: 400;
+    font-size: 90%;
+    padding-bottom: 0.5%;
+}
+
+.Passos img{
+    width: 70%;
+    padding: 3%;
+}
+
+.sobre{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3% 3% 2% 3%;
+    margin: 1%;
+}
+
+.sobreInfo{
+    width: 45%;
+    height: auto;
+}
+
+.sobre h1{
+    font-weight: 700;
+    font-size: 200%;
+    padding-bottom: 1.5%;
+}
+
+.sobre p{
+    font-weight: 500;
+    font-size: 90%;
+    padding-bottom: 0.5%;
+}
+
+.sobre img{
+    width: 60%;
+    height: auto;
+}
+
+.missao{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 3%;
+    background-color: var(--verde-claro);
+
+}
+
+.cardMissao{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco);
+    width: 100%;
+    padding: 0.5%;
+}
+
+.cardMissao p{
+    width: 50%;
+    font-size: 80%;
+    text-align: center;
+
+}
+
+.cardMissao img{
+    width: 28%;
+    height: auto;
+}
+
+.cuida{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3% 3% 2% 3%;
+    margin: 1%;
+}
+
+.cuidaImg img{
+    width: 45%;
+    padding: 0 2% 0 0;
+    margin: 0 0 0 4%;
+    border-radius: 8%;
+}
+
+.cuida h1{
+    font-weight: 700;
+    font-size: 200%;
+    padding-bottom: 1.5%;
+}
+
+.cuida p{
+    font-weight: 500;
+    font-size: 90%;
+    padding-bottom: 0.5%;
+}
+
+.adocao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    padding: 0px 80px;
+}
+
+.adocaoInfo{
+    max-width: 500px;
+}
+
+.adocaoInfo h1{
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.adocaoInfo p{
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.menu{
+    width: 85%;
+    margin: -50px auto 40px; /* faz ele subir no banner */
+    padding: 15px 20px;
+    background-color: var(--cinza-forte);
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.iconeBusca img{
+    width: 16px;
+    opacity: 0.6;
+}
+
+.buscaBox{
+    flex: 1; /* ocupa mais espaço */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.buscaBox input{
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+
+.filtro{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+
+.filtro select{
+    border: none;
+    outline: none;
+    background: var(--cinza-forte);
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.cardPet{
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.40);
+}
+
+.pets{
+    display: grid;
+    grid-template-columns: repeat(6, 200px); 
+    gap: 70px;
+    padding: 20px;
+    justify-content: center; 
+    margin: 0 auto;
+}
+
+.cardPet img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cardInfo{
+    margin-top: 8px;
+    text-align: left;
+}
+
+.cardInfo h3{
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.cardInfo p{
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.buttonCard{
+    width: 100%;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    background: var(--azul-forte);
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
