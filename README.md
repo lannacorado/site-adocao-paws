@@ -24,14 +24,19 @@ O projeto foi desenvolvido como atividade acadêmica/prática para aprimorar con
 - Header e Footer personalizados
 - Layout inspirado em protótipo do Figma
 
+---
 
 ## ⚠️ Status do Projeto
 O projeto ainda não está finalizado.
 Futuramente serão realizadas novas melhorias, correções e implementações de funcionalidades para aprimorar a plataforma e torná-la mais completa, responsiva e funcional.
 
+---
+
 ## Links
 - [Protótipo do Figma](https://www.figma.com/design/T9vnGpSmBJyLbOcVaKE4ZD/Patas?node-id=203-1971&t=qgGAatmzoX1RInju-0)
 - [Video explicativo do projeto]()
+
+---
 
 ## 👨‍💻 Desenvolvido por
 Ilanna Karolyna Corado
