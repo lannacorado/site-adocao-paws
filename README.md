@@ -10,7 +10,7 @@ O projeto foi desenvolvido como atividade acadêmica/prática para aprimorar con
 
 ## 🚀 Tecnologias Utilizadas
 
-- HTML5
+- HTML
 - VScode
 - Git e GitHub
 
