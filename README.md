@@ -35,6 +35,7 @@ Futuramente serão realizadas novas melhorias, correções e implementações de
 ## Links
 - [Protótipo do Figma](https://www.figma.com/proto/T9vnGpSmBJyLbOcVaKE4ZD/Patas?node-id=83-13&t=YWQlQtzActUkNkhJ-1)
 - [Video explicativo do projeto]()
+- [Github pages]( https://lannacorado.github.io/site-adocao-paws/)
 
 ---
 
