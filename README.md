@@ -33,7 +33,7 @@ Futuramente serão realizadas novas melhorias, correções e implementações de
 ---
 
 ## Links
-- [Protótipo do Figma]([https://www.figma.com/design/T9vnGpSmBJyLbOcVaKE4ZD/Patas?node-id=203-1971&t=qgGAatmzoX1RInju-0](https://www.figma.com/proto/T9vnGpSmBJyLbOcVaKE4ZD/Patas?node-id=83-13&t=YWQlQtzActUkNkhJ-1)
+- [Protótipo do Figma](https://www.figma.com/proto/T9vnGpSmBJyLbOcVaKE4ZD/Patas?node-id=83-13&t=YWQlQtzActUkNkhJ-1)
 - [Video explicativo do projeto]()
 
 ---
