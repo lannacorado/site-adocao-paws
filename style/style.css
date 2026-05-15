@@ -3,15 +3,15 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-weight: 500;
+    box-sizing: border-box;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    background: var(--cinza);
+    background-color: var(--cinza);
     color: var(--marrom-forte);
-    font-size: 16px;
+    overflow-x: hidden;
 }
 
 /*Ele serve principalmente para criar variáveis CSS.*/
@@ -19,19 +19,21 @@ body{
     --verde-claro: #8FAE9E;  
     --cinza: #F5F5F5;  
     --branco: #ffffff;         
-    --marrom-forte: #393833;    
+    --marrom-forte: #393833;   
+    --laranja: #FF7F11;
     --azul-forte: #0f6c81;   
 }
 
-.buttons .buttonDoe, .buttons .buttonEntrar, .buttons .buttonAdote, .buttons .buttonApadrinhe{
-    background-color: var(--azul-forte);
-    color: var(--branco);
-    padding: 3px 15px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 60%;
-    font-weight: 600;
-    display: inline-block;
+:root{
+    --titulo: 14px;
+    --subtitulo: 18px;
+    --corpo-texto: 32px;
+}
+
+:root{
+    --suave: 300;
+    --forte: 500;
+    --muito-forte: 700;
 }
 
 header{
@@ -43,6 +45,9 @@ header{
     position: relative; /* para aparecer a sombra do header*/
     z-index: 1000;
     box-shadow: 10px 0px 5px rgb(0, 0, 0, 0.20);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo img{ 
@@ -51,15 +56,44 @@ header{
     object-fit: contain; 
 }
 
-.navLinks a{
-    text-decoration: none;
-    color: var(--marrom-escuro);
-    margin: 0 15px;
-    font-weight: 700;
-    font-size: 90%;
+.navLinks{
+    display: flex;
+    gap: 35px;
 }
 
-.Carrosel{
+.navLinks a{
+    text-decoration: none;
+    color: var(--marrom-forte);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navLinks a:hover{
+    color: var(--branco);
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.buttons a{
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.buttons a:hover{
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.carrosel{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -69,43 +103,146 @@ header{
 }
 
 .carroselInfo{
-    width: 45%;
+    width: 40%;
     height: auto;
 }
 
 .carroselInfo h1{
     font-weight: 700;
-    font-size: 200%;
+    font-size: 2rem;
     padding-bottom: 1.5%;
 }
 
+.carroselImg{
+    width: 58%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
 .carroselImg img{
-    width: 60%;
+    width: 100%;
+    max-width: 1200px;
     height: auto;
+    display: block;
+    
 }
 
 .Passos{
     text-align: center;
     width: 100%;
-    padding: 2% 3% 2% 3%;
-    margin: 1%;
+    padding: 70px 5%;
 }
 
-.Passos h1{
+.Passos h2{
     font-weight: 700;
-    font-size: 200%;
+    font-size: 2rem;
     padding-bottom: 1%;
 }
 
 .Passos p{
     font-weight: 400;
-    font-size: 90%;
+    font-size: 1rem;
     padding-bottom: 0.5%;
 }
 
 .Passos img{
     width: 70%;
     padding: 3%;
+}
+
+.contato{
+    background-color: var(--verde-claro);
+    padding: 70px 5%;
+}
+
+.contato h2{
+    font-weight: 700;
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.contatoContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contentContato{
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+    gap: 40px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    padding: 40px 60px 40px 60px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.info{
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-right: 1px solid #cfcfcf;
+    padding-right: 20px;
+}
+
+.info p{
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.info img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+.formulario input, .formulario textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdbdbd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.formulario textarea{
+    height: 100px;
+    resize: none;
+}
+
+.formulario button{
+    width: 140px;
+    height: 45px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--laranja);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .sobre{
@@ -140,39 +277,44 @@ header{
 
 .missao{
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
+    gap: 60px;
     width: 100%;
-    height: auto;
     padding: 3%;
     background-color: var(--verde-claro);
-
+    flex-wrap: wrap;
 }
 
 .cardMissao{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--branco);
-    width: 100%;
-    padding: 0.5%;
+    width: 220px;
+    min-height: 180px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .cardMissao p{
-    width: 50%;
-    font-size: 80%;
+    font-size: 14px;
     text-align: center;
-
+    width: 100%;
 }
 
 .cardMissao img{
-    width: 28%;
+    width: 70px;
     height: auto;
+    margin-bottom: 15px;
 }
 
 .cuida{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 3% 3% 2% 3%;
+    padding: 3% 3% 3% 3%;
     margin: 1%;
 }
 
@@ -198,81 +340,117 @@ header{
 .adocao{
     display: flex;
     justify-content: space-between;
+    background-color: var(--verde-claro);
     align-items: center;
-    height: 300px;
-    padding: 0px 80px;
+    min-height: 420px;
+    padding: 60px 80px;
+    overflow: hidden;
 }
 
 .adocaoInfo{
-    max-width: 500px;
+    max-width: 550px;
 }
 
-.adocaoInfo h1{
-    font-size: 100%;
+.adocaoInfo h2{
     font-weight: 700;
-    line-height: 1.2;
+    font-size: 56px;
+    margin-bottom: 20px;
 }
 
 .adocaoInfo p{
-    margin-top: 15px;
     font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.adocaoImg img{
+    width: 480px;
+    max-width: 100%;
 }
 
 .menu{
-    width: 85%;
-    margin: -50px auto 40px; /* faz ele subir no banner */
-    padding: 15px 20px;
-    background-color: var(--cinza-forte);
-    border-radius: 40px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 88%;
+    margin: 50px auto 50px;
+    padding: 18px 25px;
+    color: var(--marrom-forte);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+/* BUSCA */
+.buscaBox{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 14px 18px;
+    border-radius: 18px;
+    border: 1px solid #ececec;
+}
+
+.iconeBusca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .iconeBusca img{
-    width: 16px;
-    opacity: 0.6;
-}
-
-.buscaBox{
-    flex: 1; /* ocupa mais espaço */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #ffffff;
-    padding: 10px 15px;
-    border-radius: 30px;
+    width: 18px;
+    opacity: 0.5;
 }
 
 .buscaBox input{
+    width: 100%;
     border: none;
     outline: none;
     background: transparent;
-    width: 100%;
-    font-size: 14px;
+    font-size: 15px;
 }
 
+.buscaBox input::placeholder{
+    color: #999;
+}
+
+/* FILTROS */
 .filtro{
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+    gap: 6px;
 }
 
+.filtro label{
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 5px;
+}
 
 .filtro select{
-    border: none;
-    outline: none;
-    background: var(--cinza-forte);
-    padding: 8px 12px;
-    border-radius: 10px;
-    margin-top: 5px;
+    min-width: 110px;
+    border: 1px solid var(--branco);
+    background: var(--branco);
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-size: 14px;
     cursor: pointer;
+}
+
+.filtro select:focus{
+    outline: none;
+    border-color: var(--verde-claro);
+    box-shadow: 0 0 0 4px rgba(126,165,143,0.15);
 }
 
 .cardPet{
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     margin: 0 auto;
     background-color: var(--branco);
     border-radius: 12px;
@@ -282,7 +460,7 @@ header{
     transition: 0.3s ease;
 }
 
-.card:hover{
+.cardPet:hover{
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.40);
 }
@@ -323,9 +501,56 @@ header{
     padding: 6px;
     border: none;
     border-radius: 8px;
-    background: var(--azul-forte);
+    background: var(--laranja);
     color: white;
     font-size: 12px;
     cursor: pointer;
     font-weight: 600;
+}
+
+.footer{
+    background-color: var(--marrom-forte);
+    color: var(--branco);
+    padding: 40px 6% 10px;
+}
+
+.footer2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* LOGO */
+.footerLogo img{
+    width: 130px;
+    height: auto;
+}
+
+/* COLUNAS */
+.footerColumn{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 180px;
+}
+
+.footerColumn p{
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ÍCONES */
+.footerColumn span{
+    margin-right: 8px;
+}
+
+/* LINHA */
+.footerLine{
+    border: none;
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+    margin-top: 20px;
 }
