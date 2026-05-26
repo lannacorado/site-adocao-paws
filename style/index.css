@@ -1,0 +1,130 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    /* Cores do Tema */
+    --fundo: #EFE3D3;
+    --fundo-secundario: #F8F5F0;
+    --branco: #fff; /*(para cards e texto dos butões)*/
+    --detalhes: #EAD7C0;
+    --texto: #393833;
+    --button: #F28C28;
+
+    /* Cores do Rodapé */
+    --footer: #5A3D31;
+
+    /* Fontes */
+    --titulo: 32px;
+    --subtitulo: 24px;
+    --corpo-texto: 14px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fundo-secundario);
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+header{
+    background-color: var(--fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4% 10%;
+    position: relative; /* para aparecer a sombra do header*/
+    z-index: 1000;
+    box-shadow: 10px 0px 5px rgb(0, 0, 0, 0.20);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img{ 
+    height: 45px; 
+    width: auto; 
+    object-fit: contain; 
+}
+
+.navLinks{
+    display: flex;
+    gap: 35px;
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.buttons a{
+    width: 100%;
+    height: auto;
+    background-color: var(--button);
+    color: var(--branco);
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.buttons a:hover{
+    filter: brightness(0.9);
+    opacity: 0.9;
+}
+
+.footer{
+    background-color: var(--footer);
+    color: var(--branco);
+    padding: 10px 100px 10px;
+}
+
+.footer2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.footerLogo img{
+    width: 130px;
+    height: auto;
+}
+
+.footerColumn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 180px;
+}
+
+.footerColumn p{
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* LINHA */
+.footerLine{
+    border: none;
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+    margin-top: 8px;
+}

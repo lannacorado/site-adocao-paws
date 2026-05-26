@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/*variaveis do sistema */
+:root{
+    /*CORES STYLE*/
+    --fundo: #EFE3D3;
+    --fundo-secundario: #F8F5F0;
+    --card: #FFFDF9;
+    --card1: #ffff;
+    
+    --texto: #393833;
+    --texto-footer: #000;
+    
+    --button: #F28C28;
+    --button-hover: #E57C17;
+    --buton-texto: #ffff;
+
+    --detalhes: #EAD7C0;
+
+    --footer-1:;
+    --footer-2:;  
+
+    /*fONTE STYLE*/
+    --titulo: 32px;
+    --subtitulo: 20px;
+    --corpo-texto: 14px;
+    --corpo-texto-sec: 12px;
+
+    --forte: 500;
+    --pesado: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--fundo-secundario);
+    color: var(--texto);
+    font-size: var(--corpo-texto);
+    padding: 50px 20px;
+}
+
+.formAdocao{
+    background: var(--card1);
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.formAdocao h2{
+    color: var(--texto);
+    font-size: var(--titulo);
+    font-weight: var(--forte);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* esse grid serve para que cada pergunta fique em coluna*/
+.Perguntas{
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 40px;
+}
+
+.Perguntas label{
+    font-weight: var(--forte);
+    color: var(--texto);
+    margin-bottom: -8px;
+}
+
+.Perguntas input, .Perguntas select, .Perguntas textarea{
+    background-color: var(--buton);
+    border: 2px solid var(--detalhes);
+    width: 100%;
+    padding: 15px;
+    border-radius: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.Perguntas input:focus,.Perguntas select:focus,.Perguntas textarea:focus{
+    border-color: var(--button);
+}
+
+.Perguntas textarea{
+    min-height: 140px;
+    grid-column: span 2;
+    resize: none;
+}
+
+.Perguntas button{
+    background: var(--button);
+    color: var(--button-texto);
+    font-size: var(--subtitulo);
+    font-weight: var(--pesado);
+    grid-column: span 2;
+    width: 100%;
+    padding: 16px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 16px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Perguntas button:hover{
+    background: var(--button);
+    transform: translateY(-2px);
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+} 

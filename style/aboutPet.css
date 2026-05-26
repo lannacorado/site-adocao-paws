@@ -1,0 +1,143 @@
+.infoPet{
+    background-color: var(--branco);
+    width: 100%;
+    max-width: 1500px;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: row;   
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; /* Reduzi para 20px porque 100px pode espalhar demais os blocos na tela */
+    flex-wrap: wrap;   
+    padding: 20px;
+}
+
+.info{
+    background-color: var(--branco); /* Substitua por #fff ou a cor de fundo do bloco se var() não carregar */
+    display: flex;
+    flex-direction: column; /* Ícone em cima, texto embaixo */
+    align-items: center;
+    justify-content: center;
+    width: 140px;          /* Largura fixa para cada bloquinho */
+    height: 140px;         /* Altura fixa para ficarem quadradinhos */
+    padding: 15px;
+    border-radius: 8px; /* Arredonda os cantos de CADA bloco */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07); 
+}
+
+.cardInfo p{
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.cardInfo img{
+    width: 60px;
+}
+
+.infoImportante{
+    width: 1000px;
+    height: auto;
+    background-color: #E5FFCE;
+    border-radius: 8px;    /* Arredonda os cantos de CADA bloco */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07); /* Sombra em volta de CADA bloco */
+}
+
+.infoImportTitulo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.infoImportTitulo h3{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.infoImportTitulo img{
+    width: 30px;
+}
+
+.infoImportContainer{
+    display: flex;
+    flex-direction: row;       /* Alinha na horizontal */
+    justify-content: space-between; /* Distribui os 3 blocos igualmente no espaço de 1000px */
+    gap: 20px;                 /* Espaço de segurança caso a tela diminua */
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+.infoImport{
+    display: flex;
+    flex-direction: row;   
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; /* Reduzi para 20px porque 100px pode espalhar demais os blocos na tela */
+    flex-wrap: wrap;   
+}
+
+.infoImport p{
+    font-size: 12px;
+}
+
+.infoImport img{
+    width: 30px;
+}
+
+.infoFormulario{
+    background-color: #ffdfcc;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;/* Alinha na horizontal */
+    justify-content: space-between; /* Distribui os 3 blocos igualmente no espaço de 1000px */
+    gap: 20px;                 /* Espaço de segurança caso a tela diminua */
+    flex-wrap: wrap;
+    padding: 40px;
+    height: auto;
+    border-radius: 8px;/* Arredonda os cantos de CADA bloco */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07); /* Sombra em volta de CADA bloco */
+}
+
+.infoFormulario img{
+    width: 100px;
+}
+
+.infoFormulario h2{
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.infoFormulario p{
+   
+}
+
+.buttonForm{
+    display: flex;
+    gap: 10px;
+}
+
+.buttonForm a{
+    width: 200px;
+    height: 80px;
+    background-color: var(--button);
+    color: var(--branco);
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.buttonForm a:hover{
+    filter: brightness(0.9);
+    opacity: 0.9;
+}
+
