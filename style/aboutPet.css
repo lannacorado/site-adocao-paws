@@ -1,143 +1,256 @@
-.infoPet{
-    background-color: var(--branco);
+.infoPet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 8px; 
     width: 100%;
-    max-width: 1500px;
+    max-width: 1200px; 
+    min-width: 950px;  
+    margin: 30px auto;
+    gap: 40px;         
+    background-color: var(--branco, #ffffff);
+    box-sizing: border-box;
+}
+
+.esquerdoInfo {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+    width: 25%;        /* Diminuímos de 30% para 25%, já que a foto é menor */
+    padding: 10px;           
+    box-sizing: border-box;
+}
+
+.esquerdoInfo img {
+    width: 100%;            
+    max-width: 280px;
+    height: auto;
+    border-radius: 16px;    
+}
+
+.esquerdoInfo h2 {
+    font-size: 22px;         
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.esquerdoInfo p {
+    font-size: 13px;
+    color: #666666;
+    margin: 0 0 10px 0;
+}
+
+.cardCaracteristicas {
+    display: flex;
+    flex-direction: row;   
+    justify-content: center; 
+    align-items: center;
+    gap: 8px;                
+    flex-wrap: wrap;   
+    padding: 10px 0;
+    margin: 5px;
+}
+
+.cardCaracteristicasInfo {
+    background-color: var(--branco, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;             
+    height: 30px;            
+    padding: 0 5px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05); 
+    border: 1px solid #e0e0e0;
+}
+
+.cardCaracteristicasInfo p {
+    font-size: 11px;         
+    font-weight: 500;
+    margin: 0;
+    color: #555555;
+}
+
+.direitoInfo {
+    display: flex;
+    flex-direction: column;   
+    align-items: flex-start;  
+    width: 72%;        /* Aumentamos de 65% para 72%! Agora os textos vão respirar */
+    padding: 10px 20px;       
+    box-sizing: border-box;
+}
+
+.direitoInfo h2 {
+    font-size: 22px;          
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #333333;
+}
+
+.direitoInfo p {
+    font-size: 13.5px;        
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+    color: #444444;
 }
 
 .cardInfo {
     display: flex;
     flex-direction: row;   
-    justify-content: center; 
+    justify-content: flex-start;
     align-items: center;
-    gap: 20px; /* Reduzi para 20px porque 100px pode espalhar demais os blocos na tela */
+    gap: 12px;               
     flex-wrap: wrap;   
-    padding: 20px;
+    padding: 10px 0;
+    width: 100%;
 }
 
-.info{
-    background-color: var(--branco); /* Substitua por #fff ou a cor de fundo do bloco se var() não carregar */
+.info {
+    background-color: var(--branco, #ffffff); 
     display: flex;
-    flex-direction: column; /* Ícone em cima, texto embaixo */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
-    width: 140px;          /* Largura fixa para cada bloquinho */
-    height: 140px;         /* Altura fixa para ficarem quadradinhos */
-    padding: 15px;
-    border-radius: 8px; /* Arredonda os cantos de CADA bloco */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07); 
+    width: 110px;            
+    height: 110px;           
+    padding: 10px;
+    border-radius: 8px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+    box-sizing: border-box;
 }
 
-.cardInfo p{
-    margin-top: 8px;
-    font-size: 12px;
+.cardInfo img {
+    width: 40px;             
+    height: auto;
+}
+
+.cardInfo p {
+    margin-top: 6px;
+    font-size: 11px;         
     font-weight: 500;
     text-align: center;
 }
 
-.cardInfo img{
-    width: 60px;
-}
-
-.infoImportante{
-    width: 1000px;
-    height: auto;
+.infoImportante {
+    width: 100%;             
     background-color: #E5FFCE;
-    border-radius: 8px;    /* Arredonda os cantos de CADA bloco */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07); /* Sombra em volta de CADA bloco */
+    border-radius: 8px;    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+    margin: 15px 0;
+    padding: 20px;     /* Aumentamos o padding interno para ficar mais elegante */
+    box-sizing: border-box;
 }
 
-.infoImportTitulo{
+.infoImportTitulo {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 15px;
+    gap: 10px;
+    padding-bottom: 15px;
 }
 
-.infoImportTitulo h3{
+.infoImportTitulo h3 {
     font-size: 14px;
     font-weight: 700;
+    margin: 0;
 }
 
-.infoImportTitulo img{
-    width: 30px;
+.infoImportTitulo img {
+    width: 24px;
+    height: auto;
 }
 
-.infoImportContainer{
+.infoImportContainer {
     display: flex;
-    flex-direction: row;       /* Alinha na horizontal */
-    justify-content: space-between; /* Distribui os 3 blocos igualmente no espaço de 1000px */
-    gap: 20px;                 /* Espaço de segurança caso a tela diminua */
-    flex-wrap: wrap;
-    padding: 20px;
-    padding-bottom: 40px;
+    flex-direction: row;       
+    justify-content: space-between; 
+    align-items: flex-start;   
+    gap: 25px;        
+    width: 100%;
 }
 
-.infoImport{
+.infoImport {
     display: flex;
     flex-direction: row;   
-    justify-content: center; 
-    align-items: center;
-    gap: 20px; /* Reduzi para 20px porque 100px pode espalhar demais os blocos na tela */
-    flex-wrap: wrap;   
+    align-items: flex-start; 
+    gap: 10px; 
+    flex: 1;  
+    min-width: 0;        
 }
 
-.infoImport p{
-    font-size: 12px;
-}
-
-.infoImport img{
-    width: 30px;
-}
-
-.infoFormulario{
-    background-color: #ffdfcc;
-    width: 1000px;
-    display: flex;
-    flex-direction: row;/* Alinha na horizontal */
-    justify-content: space-between; /* Distribui os 3 blocos igualmente no espaço de 1000px */
-    gap: 20px;                 /* Espaço de segurança caso a tela diminua */
-    flex-wrap: wrap;
-    padding: 40px;
+.infoImport img {
+    width: 24px;
     height: auto;
-    border-radius: 8px;/* Arredonda os cantos de CADA bloco */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07); /* Sombra em volta de CADA bloco */
+    flex-shrink: 0;          /* Impede o ícone de amassar */
 }
 
-.infoFormulario img{
-    width: 100px;
+.infoImport p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+    word-break: break-word;  /* Força o texto a quebrar linhas dentro da sua própria coluna */
 }
 
-.infoFormulario h2{
-    font-weight: 700;
-    padding-bottom: 5px;
-}
-
-.infoFormulario p{
-   
-}
-
-.buttonForm{
+.infoFormulario {
+    background-color: #ffdfcc;
+    width: 100%;             
     display: flex;
-    gap: 10px;
+    flex-direction: row;     
+    justify-content: space-between;
+    align-items: center;     
+    gap: 20px;                 
+    padding: 20px;           
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+    box-sizing: border-box;
 }
 
-.buttonForm a{
-    width: 200px;
-    height: 80px;
-    background-color: var(--button);
-    color: var(--branco);
-    padding: 20px;
-    padding-bottom: 10px;
+.infoFormulario img {
+    width: 70px;             
+    height: auto;
+}
+
+.infoFormTitulo {
+    flex: 1;
+}
+
+.infoFormulario h2 {
+    font-size: 18px;         
+    font-weight: 700;
+    margin: 0;
+    padding-bottom: 4px;
+}
+
+.infoFormulario p {
+    font-size: 12px;         
+    margin: 0;
+}
+
+.buttonForm {
+    display: flex;
+    align-items: center;
+}
+
+.buttonForm a {
+    width: 150px;            
+    height: 65px;            
+    background-color: var(--button, #ff8c00);
+    color: var(--branco, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
     text-decoration: none;
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;         
     font-weight: 700;
     transition: 0.3s;
 }
 
-.buttonForm a:hover{
+.buttonForm a:hover {
     filter: brightness(0.9);
     opacity: 0.9;
 }
-
