@@ -12,7 +12,9 @@ body{
     background: var(--cinza);
     color: var(--marrom-forte);
     font-size: 16px;
-    padding: 50px 20px;
+    padding: 0 20px 50px;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
 /*Ele serve principalmente para criar variáveis CSS.*/
@@ -29,13 +31,16 @@ body{
     max-width: 1100px;
     margin: auto;
     background: var(--branco);
+    color: var(--branco2);
     padding: 40px;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-top: 5rem;
 }
 
 .formAdocao h2{
     text-align: center;
+    color: var(--branco2);
     font-size: 2.3rem;
     margin-bottom: 40px;
 }
@@ -51,8 +56,8 @@ body{
 
 .Perguntas label{
     font-size: 0.95rem;
+    color: var(--branco2);
     font-weight: 500;
-    color: var(--marrom-forte);
     margin-bottom: -10px;
 }
 
@@ -88,7 +93,24 @@ body{
     border: none;
     border-radius: 16px;
     background: var(--laranja);
-    color: var(--branco);
+    color: var(--branco2);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Perguntas a {
+    grid-column: span 2;
+    width: 400px;
+    justify-self: center;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 16px;
+    background: var(--verde-claro);
+    color: var(--marrom-forte);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;

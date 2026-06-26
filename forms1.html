@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="style/forms.css">
+    <link rel="stylesheet" href="style/accessibility.css">
+    <script src="assets/js/accessibility.js" defer></script>
 </head>
 <body>
+    <div class="accessibility-toggle-button">
+        <button id="toggle-accessibility-toolbar" aria-pressed="true" aria-label="Ocultar controles de acessibilidade">Ocultar barra</button>
+    </div>
+    <div class="accessibility-toolbar" role="toolbar" aria-label="Controles de acessibilidade">
+        <div class="accessibility-group">
+            <span>Tema:</span>
+            <button type="button" id="theme-default" aria-pressed="true">Padrão</button>
+            <button type="button" id="theme-high-contrast" aria-pressed="false">Contraste alto</button>
+            <button type="button" id="theme-grayscale" aria-pressed="false">Escala de cinza</button>
+        </div>
+        <div class="accessibility-group">
+            <span>Tamanho do texto:</span>
+            <button type="button" id="text-smaller" aria-pressed="false">Menor</button>
+            <button type="button" id="text-normal" aria-pressed="true">Normal</button>
+            <button type="button" id="text-larger" aria-pressed="false">Maior</button>
+        </div>
+        <div class="accessibility-group">
+            <button type="button" id="text-spacing" aria-pressed="false">Espaçamento</button>
+            <button type="button" id="accessibility-reset" aria-pressed="false">Redefinir</button>
+        </div>
+    </div>
 
     <section class="formAdocao">
         <h2>Formulário de Adoção</h2>
@@ -61,8 +84,8 @@
                 <label>Profissão</label>
                 <input type="text">
             </div>
-
             <button type="submit">Enviar</button>
+            <a href="adopt.html" class="buttonVoltar">Voltar</a>
         </form>
     </section>
 

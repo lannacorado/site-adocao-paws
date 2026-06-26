@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/accessibility.css">
+    <script src="assets/js/accessibility.js" defer></script>
 
 </head>
 <body>
+    <div class="accessibility-toggle-button">
+        <button id="toggle-accessibility-toolbar" aria-pressed="true" aria-label="Ocultar controles de acessibilidade">Ocultar barra</button>
+    </div>
+    <div class="accessibility-toolbar" role="toolbar" aria-label="Controles de acessibilidade">
+        <div class="accessibility-group">
+            <span>Tema:</span>
+            <button type="button" id="theme-default" aria-pressed="true">Padrão</button>
+            <button type="button" id="theme-high-contrast" aria-pressed="false">Contraste alto</button>
+            <button type="button" id="theme-grayscale" aria-pressed="false">Escala de cinza</button>
+        </div>
+        <div class="accessibility-group">
+            <span>Tamanho do texto:</span>
+            <button type="button" id="text-smaller" aria-pressed="false">Menor</button>
+            <button type="button" id="text-normal" aria-pressed="true">Normal</button>
+            <button type="button" id="text-larger" aria-pressed="false">Maior</button>
+        </div>
+        <div class="accessibility-group">
+            <button type="button" id="text-spacing" aria-pressed="false">Espaçamento</button>
+            <button type="button" id="accessibility-reset" aria-pressed="false">Redefinir</button>
+        </div>
+    </div>
     <header>
         <div class="logo">
             <img src="assets/logo/8FAE9E.png" alt="Pata Logo" >
@@ -22,7 +45,7 @@
 
         <div class="buttons">
             <a href="#" class="buttonDoe">DOE</a>
-            <a href="#" class="buttonEntrar">ENTRAR</a>
+            <a href="forms1.html" class="buttonEntrar">ENTRAR</a>
         </div>
     </header>
 

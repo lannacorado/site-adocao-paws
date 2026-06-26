@@ -18,10 +18,19 @@ body{
 :root{
     --verde-claro: #8FAE9E;  
     --cinza: #F5F5F5;  
-    --branco: #ffffff;         
-    --marrom-forte: #393833;   
+    --branco: #ffffff; 
+    --branco2: #ffffff; 
+    --marrom-forte: #393833;  
+    --marrom-forte2: #393833; 
     --laranja: #FF7F11;
-    --azul-forte: #0f6c81;   
+    --azul-forte: #0f6c81;
+    --surface: #ffffff;
+    --surface-strong: #f1f1f1;
+    --surface-muted: rgba(255, 255, 255, 0.85);
+    --border-light: #cfcfcf;
+    --border-soft: #bdbdbd;
+    --border-faint: rgba(255,255,255,0.4);
+    --text-muted: #999;
 }
 
 :root{
@@ -44,7 +53,7 @@ header{
     padding: 0.4% 10%;
     position: relative; /* para aparecer a sombra do header*/
     z-index: 1000;
-    box-shadow: 10px 0px 5px rgb(0, 0, 0, 0.20);
+    box-shadow: 10px 0px 5px rgba(0, 0, 0, 0.20);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -79,7 +88,7 @@ header{
 
 .buttons a{
     background-color: var(--laranja);
-    color: var(--branco);
+    color: var(--branco2);
     padding: 8px 18px;
     border-radius: 8px;
     text-decoration: none;
@@ -174,7 +183,7 @@ header{
     justify-content: space-between;
     align-items: first baseline;
     gap: 40px;
-    background-color: #f1f1f1;
+    background-color: var(--cinza);
     border-radius: 15px;
     padding: 40px 60px 40px 60px;
     max-width: 800px;
@@ -184,7 +193,7 @@ header{
 .info{
     font-size: 22px;
     margin-bottom: 15px;
-    border-right: 1px solid #cfcfcf;
+    border-right: 1px solid var(--border-light);
     padding-right: 20px;
 }
 
@@ -222,7 +231,7 @@ header{
 .formulario input, .formulario textarea{
     width: 100%;
     padding: 10px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid var(--border-soft);
     border-radius: 6px;
     font-size: 15px;
 }
@@ -239,7 +248,7 @@ header{
     border: none;
     border-radius: 6px;
     background-color: var(--laranja);
-    color: white;
+    color: var(--branco2);
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -302,6 +311,7 @@ header{
     font-size: 14px;
     text-align: center;
     width: 100%;
+    color: var(--marrom-forte2);
 }
 
 .cardMissao img{
@@ -372,9 +382,9 @@ header{
     margin: 50px auto 50px;
     padding: 18px 25px;
     color: var(--marrom-forte);
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--surface-muted);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid var(--border-faint);
     border-radius: 28px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     display: flex;
@@ -390,10 +400,10 @@ header{
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #ffffff;
+    background: var(--surface);
     padding: 14px 18px;
     border-radius: 18px;
-    border: 1px solid #ececec;
+    border: 1px solid var(--border-faint);
 }
 
 .iconeBusca{
@@ -416,7 +426,7 @@ header{
 }
 
 .buscaBox input::placeholder{
-    color: #999;
+    color: var(--text-muted);
 }
 
 /* FILTROS */
@@ -430,6 +440,7 @@ header{
     font-size: 12px;
     font-weight: 600;
     padding-left: 5px;
+    color: var(--marrom-forte2);
 }
 
 .filtro select{
@@ -458,6 +469,7 @@ header{
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     text-align: center;
     transition: 0.3s ease;
+    color: var(--marrom-forte2);
 }
 
 .cardPet:hover{
@@ -502,7 +514,7 @@ header{
     border: none;
     border-radius: 8px;
     background: var(--laranja);
-    color: white;
+    color: var(--branco2);
     font-size: 12px;
     cursor: pointer;
     font-weight: 600;
@@ -520,6 +532,7 @@ header{
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
+    color: var(--branco2);
 }
 
 /* LOGO */
