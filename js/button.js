@@ -1,5 +1,4 @@
 /* botão saiba mais */
-
 const modal = document.getElementById("modal");
 const conteudo = document.getElementById("conteudo-modal");
 
