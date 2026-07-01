@@ -1,0 +1,275 @@
+.carrossel {
+    min-height: 560px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.slides {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-1,
+.slide-2,
+.slide-3 {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-sizing: border-box;
+    padding: 80px 10% 0;
+}
+
+.slide-1.ativo,
+.slide-2.ativo,
+.slide-3.ativo {
+    display: flex;
+}
+
+.slide-1 {
+    background: linear-gradient(135deg, #8FA8C4 0%, #839CB5 60%, #738EAD 100%);
+}
+
+.slide-2 {
+    background: linear-gradient(135deg, #c496b5 0%, #d4a6c4 45%, #dcb3ce 55%, #e8d0ea 100%);
+}
+
+.slide-3 {
+    background: linear-gradient(135deg, #8fa38a 0%, #9fb096 45%, #a9bba0 55%, #c5d1bf 100%);
+}
+
+.slide-1 h1,
+.slide-2 h1,
+.slide-3 h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    max-width: 500px;
+    color: #2F4055;
+}
+
+.slide-1 p,
+.slide-2 p,
+.slide-3 p {
+    margin-top: 20px;
+    font-size: 16px;
+    max-width: 400px;
+    color: #3F536B;
+}
+
+.slide-1 div,
+.slide-2 div,
+.slide-3 div,
+.slide-1 span,
+.slide-2 span,
+.slide-3 span {
+    flex: 1;
+
+}
+
+.slide-1 div,
+.slide-2 div,
+.slide-3 div{
+    max-width: 500px;
+}
+
+.slide-1 span,
+.slide-2 span,
+.slide-3 span {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: stretch;
+}
+
+.slide-2 img{
+    width: 100%;
+    max-width: 370px;
+}
+
+.slide-1 img,
+.slide-3 img {
+    width: 100%;
+    max-width: 800px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    font-family: 40px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 100px;
+    background-color: transparent;
+    padding: 60px 5%;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.conteiner-contato {
+    background: #ffffff;
+    display: flex;
+    gap: 60px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(18, 38, 43, 0.07);
+    max-width: 700px;
+    width: 100%;
+}
+
+.contato-info {
+    width: 50%;
+    padding-right: 40px;
+    border-right: 1px solid #ddd;
+}
+
+.contato-info h2,
+.contato-info h3 {
+    color: #2F4055;
+    margin-bottom: 15px;
+}
+
+.contato-info p,
+.contato-redes p {
+    color: #3F536B;
+    margin-top: 10px;
+}
+
+.contato-info img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.formulario {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    color: #3F536B;
+    margin-top: 14px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.formulario textarea {
+    height: 120px;
+    resize: none;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #EEEEEE;
+    outline: none;
+    transition: border-color .3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border: 1px solid #46617E;
+    box-shadow: 0 0 0 4px rgba(70, 97, 126, 0.15);
+}
+
+.formulario button {
+    width: 100px;
+    margin-top: 20px;
+    padding: 10px 8px;
+    border: none;
+    border-radius: 8px;
+    background: #91967F;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.formulario button:hover {
+    transform: translateY(-2px);
+    background-color: #AEB39C;
+}
+
+.contato-img {
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contato-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+
+/* =========================
+      MODO ESCURO
+========================= */
+
+body.dark .slide-1 h1,
+body.dark .slide-2 h1,
+body.dark .slide-3 h1{
+    background: #2B2B2B;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+body.dark .slide-1 p,
+body.dark .slide-2 p,
+body.dark .slide-3 p{
+    background: #2B2B2B;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+body.dark .conteiner-contato{
+    background: #2B2B2B;
+}
+
+
+body.dark .conteiner-contato h2,
+body.dark .conteiner-contato h3,
+body.dark .conteiner-contato p,
+body.dark .conteiner-contato label{
+    color: #ffffff;
+}
+
+body.dark .formulario button{
+    background: #FFFFFF;
+    color: #2B2B2B;
+}

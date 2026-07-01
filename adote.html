@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas ONG | Home</title>
+    <link rel="stylesheet" href="style/adote.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo da ONG Patas">
+        </div>
+
+        <nav class="nav-links" aria-label="Menu principal">
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="index.html#Contato">Contato</a>
+            <a href="adote.html">Adote</a>
+        </nav>
+
+        <div class="access-button">
+            <button id="button-lua">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="button-sol" aria-label="Ativar modo claro">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </div>
+    </header>
+
+
+    <div class="conteudo">
+
+        <section class="conteudo-info">
+            <h1>Encontre seu novo melhor amigo</h1>
+            <p>
+                Conheça nossos cães e gatos disponíveis para adoção.
+                Utilize os filtros para encontrar o companheiro ideal para você e sua família.
+            </p>
+        </section>
+
+        <section class="conteudo-filtros">
+            <select id="especie">
+                <option value="">Espécie</option>
+                <option value="cachorro">Cachorro</option>
+                <option value="gato">Gato</option>
+            </select>
+
+            <select id="sexo">
+                <option value="">Sexo</option>
+                <option value="macho">Macho</option>
+                <option value="femea">Fêmea</option>
+            </select>
+
+            <select id="porte">
+                <option value="">Porte</option>
+                <option value="pequeno">Pequeno</option>
+                <option value="medio">Médio</option>
+                <option value="grande">Grande</option>
+            </select>
+
+            <select id="idade">
+                <option value="">Idade</option>
+                <option value="filhote">Filhote</option>
+                <option value="adulto">Adulto</option>
+                <option value="idoso">Idoso</option>
+            </select>
+
+            <button class="filtrar-button">Filtrar</button>
+            <button class="limpar-button">Limpar</button>
+        </section>
+
+        <section class="pet">
+
+            <div class="pet-card">
+                <img src="assets/pets/thor.jfif" alt="Cachorro Thor">
+                <div class="card-info">
+                    <h3>Thor</h3>
+                    <p>2 anos | Médio | Macho</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/luna.jpg" alt="Gata Luna">
+                <div class="card-info">
+                    <h3>Luna</h3>
+                    <p>1 ano | Pequena | Fêmea</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/luke.jpg" alt="Cachorro Luke">
+                <div class="card-info">
+                    <h3>Luke</h3>
+                    <p>1 ano | Grande | Macho</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/luffy.jpg" alt="Gato Luffy">
+                <div class="card-info">
+                    <h3>Luffy</h3>
+                    <p>3 anos | Grande | Macho</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/mel.jpg" alt="Cachorra Mel">
+                <div class="card-info">
+                    <h3>Mel</h3>
+                    <p>3 anos | Grande | Fêmea</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/nina.jpg" alt="Gata Nina">
+                <div class="card-info">
+                    <h3>Nina</h3>
+                    <p>3 anos | Grande | Fêmea</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/simba.jpg" alt="Gato Simba">
+                <div class="card-info">
+                    <h3>Simba</h3>
+                    <p>2 anos | Pequeno | Macho</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/oliver.jpg" alt="Gato Oliver">
+                <div class="card-info">
+                    <h3>Oliver</h3>
+                    <p>2 anos | Médio | Macho</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/ambessa.jfif" alt="Cachorra Ambessa">
+                <div class="card-info">
+                    <h3>Ambessa</h3>
+                    <p>3 anos | Grande | Fêmea</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/lux.jfif" alt="Cachorra Lux">
+                <div class="card-info">
+                    <h3>Lux</h3>
+                    <p>6 meses | Pequena | Fêmea</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/bob.jfif" alt="Cachorro Bob">
+                <div class="card-info">
+                    <h3>Bob</h3>
+                    <p>8 meses | Grande | Macho</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/safira.jfif" alt="Cachorra Safira">
+                <div class="card-info">
+                    <h3>Safira</h3>
+                    <p>5 anos | Grande | Fêmea</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/sol.jfif" alt="Gata Sol">
+                <div class="card-info">
+                    <h3>Sol</h3>
+                    <p>3 meses | Pequena | Fêmea</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="pet-card">
+                <img src="assets/pets/rafa.jfif" alt="Cachorro Rafa">
+                <div class="card-info">
+                    <h3>Rafa</h3>
+                    <p>2 anos | Grande | Macho</p>
+                    <button type="button" class="card-button" data-url="modal.html">Saiba mais</button>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div class="conteiner-footer">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="Logo Patas ONG">
+            </div>
+
+            <div class="footer-column">
+                <p>Instagram: @pawsong</p>
+                <p>Facebook: @pawsong</p>
+                <p>Twitter: @pawsong</p>
+            </div>
+
+            <div class="footer-column">
+                <p>WhatsApp: (43) 9999-9999</p>
+                <p>Telefone: (43) 9999-9999</p>
+                <p>Telefone: (43) 9999-9999</p>
+            </div>
+
+            <div class="footer-column">
+                <p>Adote</p>
+                <p>Seja membro</p>
+                <p>Denuncie maus-tratos</p>
+            </div>
+
+            <div class="footer-column">
+                <p>Ajude</p>
+                <p>Doações</p>
+                <p>Voluntariado</p>
+            </div>
+        </div>
+
+        <hr class="footer-line">
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+
+            <div id="conteudo-modal"></div>
+        </div>
+    </div>
+
+    <script src="Js/acessibilidade.js"></script>
+    <script src="Js/button.js"></script>
+</body>
+</html>

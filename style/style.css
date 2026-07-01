@@ -3,567 +3,220 @@
 *{
     margin: 0;
     padding: 0;
-    font-weight: 500;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--cinza);
-    color: var(--marrom-forte);
+    background-color: var(--branco);
     overflow-x: hidden;
 }
 
-/*Ele serve principalmente para criar variáveis CSS.*/
-:root{
-    --verde-claro: #8FAE9E;  
-    --cinza: #F5F5F5;  
-    --branco: #ffffff; 
-    --branco2: #ffffff; 
-    --marrom-forte: #393833;  
-    --marrom-forte2: #393833; 
-    --laranja: #FF7F11;
-    --azul-forte: #0f6c81;
-    --surface: #ffffff;
-    --surface-strong: #f1f1f1;
-    --surface-muted: rgba(255, 255, 255, 0.85);
-    --border-light: #cfcfcf;
-    --border-soft: #bdbdbd;
-    --border-faint: rgba(255,255,255,0.4);
-    --text-muted: #999;
-}
-
-:root{
-    --titulo: 14px;
-    --subtitulo: 18px;
-    --corpo-texto: 32px;
-}
-
-:root{
-    --suave: 300;
-    --forte: 500;
-    --muito-forte: 700;
-}
-
 header{
-    background-color: var(--verde-claro);
-    display: flex;
-    justify-content: space-between;
+    width: 75%;
+    margin: 20px auto 0;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 0.4% 10%;
-    position: relative; /* para aparecer a sombra do header*/
-    z-index: 1000;
-    box-shadow: 10px 0px 5px rgba(0, 0, 0, 0.20);
-    position: sticky;
+    padding: 6px 25px;
+    border-radius: 50px;
+    position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
+    transition: .3s;
 }
 
-.logo img{ 
-    height: 45px; 
-    width: auto; 
-    object-fit: contain; 
+.logo img{
+    height: 35px;
+    width: auto;
+    object-fit: contain;
 }
 
-.navLinks{
+.nav-links{
     display: flex;
-    gap: 35px;
+    padding: 4px;
+    gap: 15px;
+    border-radius: 40px;
 }
 
-.navLinks a{
+.nav-links a{
+    padding: 10px 18px;
+    border-radius: 30px;
     text-decoration: none;
-    color: var(--marrom-forte);
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.navLinks a:hover{
-    color: var(--branco);
-}
-
-.buttons{
-    display: flex;
-    gap: 10px;
-}
-
-.buttons a{
-    background-color: var(--laranja);
-    color: var(--branco2);
-    padding: 8px 18px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 700;
-    transition: 0.3s;
-}
-
-.buttons a:hover{
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-
-.carrosel{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 0 1% 0;
-    padding: 4% 3% 4% 3%;
-    background-color: var(--verde-claro);
-}
-
-.carroselInfo{
-    width: 40%;
-    height: auto;
-}
-
-.carroselInfo h1{
-    font-weight: 700;
-    font-size: 2rem;
-    padding-bottom: 1.5%;
-}
-
-.carroselImg{
-    width: 58%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.carroselImg img{
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    display: block;
-    
-}
-
-.Passos{
-    text-align: center;
-    width: 100%;
-    padding: 70px 5%;
-}
-
-.Passos h2{
-    font-weight: 700;
-    font-size: 2rem;
-    padding-bottom: 1%;
-}
-
-.Passos p{
-    font-weight: 400;
-    font-size: 1rem;
-    padding-bottom: 0.5%;
-}
-
-.Passos img{
-    width: 70%;
-    padding: 3%;
-}
-
-.contato{
-    background-color: var(--verde-claro);
-    padding: 70px 5%;
-}
-
-.contato h2{
-    font-weight: 700;
-    font-size: 2rem;
-    padding-bottom: 20px;
-}
-
-.contatoContainer{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 50px;
-}
-
-.contentContato{
-    display: flex;
-    justify-content: space-between;
-    align-items: first baseline;
-    gap: 40px;
-    background-color: var(--cinza);
-    border-radius: 15px;
-    padding: 40px 60px 40px 60px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.info{
-    font-size: 22px;
-    margin-bottom: 15px;
-    border-right: 1px solid var(--border-light);
-    padding-right: 20px;
-}
-
-.info p{
-    font-size: 16px;
-    line-height: 1.4;
-}
-
-.info img{
-    width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-.redes{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.formulario{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-}
-
-.formulario label{
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 12px;
-    margin-bottom: 6px;
-}
-
-.formulario input, .formulario textarea{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--border-soft);
-    border-radius: 6px;
-    font-size: 15px;
-}
-
-.formulario textarea{
-    height: 100px;
-    resize: none;
-}
-
-.formulario button{
-    width: 140px;
-    height: 45px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 6px;
-    background-color: var(--laranja);
-    color: var(--branco2);
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.sobre{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 3% 3% 2% 3%;
-    margin: 1%;
-}
-
-.sobreInfo{
-    width: 45%;
-    height: auto;
-}
-
-.sobre h1{
-    font-weight: 700;
-    font-size: 200%;
-    padding-bottom: 1.5%;
-}
-
-.sobre p{
-    font-weight: 500;
-    font-size: 90%;
-    padding-bottom: 0.5%;
-}
-
-.sobre img{
-    width: 60%;
-    height: auto;
-}
-
-.missao{
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 60px;
-    width: 100%;
-    padding: 3%;
-    background-color: var(--verde-claro);
-    flex-wrap: wrap;
-}
-
-.cardMissao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--branco);
-    width: 220px;
-    min-height: 180px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.cardMissao p{
+    color: #35475C;
     font-size: 14px;
-    text-align: center;
-    width: 100%;
-    color: var(--marrom-forte2);
-}
-
-.cardMissao img{
-    width: 70px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.cuida{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 3% 3% 3% 3%;
-    margin: 1%;
-}
-
-.cuidaImg img{
-    width: 45%;
-    padding: 0 2% 0 0;
-    margin: 0 0 0 4%;
-    border-radius: 8%;
-}
-
-.cuida h1{
-    font-weight: 700;
-    font-size: 200%;
-    padding-bottom: 1.5%;
-}
-
-.cuida p{
-    font-weight: 500;
-    font-size: 90%;
-    padding-bottom: 0.5%;
-}
-
-.adocao{
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--verde-claro);
-    align-items: center;
-    min-height: 420px;
-    padding: 60px 80px;
-    overflow: hidden;
-}
-
-.adocaoInfo{
-    max-width: 550px;
-}
-
-.adocaoInfo h2{
-    font-weight: 700;
-    font-size: 56px;
-    margin-bottom: 20px;
-}
-
-.adocaoInfo p{
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.adocaoImg img{
-    width: 480px;
-    max-width: 100%;
-}
-
-.menu{
-    width: 88%;
-    margin: 50px auto 50px;
-    padding: 18px 25px;
-    color: var(--marrom-forte);
-    background: var(--surface-muted);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--border-faint);
-    border-radius: 28px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    font-weight: 600;
     position: relative;
-    z-index: 10;
+    transition: .3s;
 }
 
-/* BUSCA */
-.buscaBox{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--surface);
-    padding: 14px 18px;
-    border-radius: 18px;
-    border: 1px solid var(--border-faint);
+.nav-links a:hover{
+    color: #35475C;;
 }
 
-.iconeBusca{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #35475C;
+    transition: .3s;
 }
 
-.iconeBusca img{
-    width: 18px;
-    opacity: 0.5;
-}
-
-.buscaBox input{
+.nav-links a:hover::after{
     width: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 15px;
 }
 
-.buscaBox input::placeholder{
-    color: var(--text-muted);
-}
-
-/* FILTROS */
-.filtro{
+.access-button{
     display: flex;
-    flex-direction: column;
+    justify-self: end;
+    align-items: center;
     gap: 6px;
 }
 
-.filtro label{
-    font-size: 12px;
-    font-weight: 600;
-    padding-left: 5px;
-    color: var(--marrom-forte2);
-}
-
-.filtro select{
-    min-width: 110px;
-    border: 1px solid var(--branco);
-    background: var(--branco);
-    padding: 12px 14px;
-    border-radius: 14px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.filtro select:focus{
-    outline: none;
-    border-color: var(--verde-claro);
-    box-shadow: 0 0 0 4px rgba(126,165,143,0.15);
-}
-
-.cardPet{
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-    background-color: var(--branco);
-    border-radius: 12px;
-    padding: 15px 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    text-align: center;
-    transition: 0.3s ease;
-    color: var(--marrom-forte2);
-}
-
-.cardPet:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.40);
-}
-
-.pets{
-    display: grid;
-    grid-template-columns: repeat(6, 200px); 
-    gap: 70px;
-    padding: 20px;
-    justify-content: center; 
-    margin: 0 auto;
-}
-
-.cardPet img{
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.cardInfo{
-    margin-top: 8px;
-    text-align: left;
-}
-
-.cardInfo h3{
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-.cardInfo p{
-    font-size: 12px;
-    margin-bottom: 8px;
-}
-
-.buttonCard{
-    width: 100%;
-    padding: 6px;
+.access-button button{
+    width: 40px;
+    height: 40px;
     border: none;
-    border-radius: 8px;
-    background: var(--laranja);
-    color: var(--branco2);
-    font-size: 12px;
+    border-radius: 114px;
+    color: #3f72af;
     cursor: pointer;
-    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.access-button button:hover{
+    transform: translateY(-2px);
+}
+
+.access-button button:focus-visible{
+    outline: 2px solid #46617E;
+    outline-offset: 3px;
+}
+
+#button-lua i{
+    color: #3f72af;
+}
+
+#button-sol i{
+    color: #f5c742;
 }
 
 .footer{
-    background-color: var(--marrom-forte);
-    color: var(--branco);
-    padding: 40px 6% 10px;
+    background-color: #46617E;
+    color: #ffffff;
+    padding: 36px 10% 28px;
 }
 
-.footer2{
+.conteiner-footer{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    gap: 18px;
     flex-wrap: wrap;
-    gap: 40px;
-    color: var(--branco2);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* LOGO */
-.footerLogo img{
-    width: 130px;
-    height: auto;
-}
-
-/* COLUNAS */
-.footerColumn{
+.footer-logo{
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    min-width: 180px;
+    align-items: flex-start;
+    margin-right: 24px;
+    max-width: 240px;
+    text-align: left;
 }
 
-.footerColumn p{
-    font-size: 0.95rem;
+.footer-logo img{
+    width: 120px;
+    margin-bottom: 18px;
+}
+
+.footerDescription{
+    font-size: 14px;
+    color: rgba(255, 255, 255, .85);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 140px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-column p{
+    font-size: 13px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* ÍCONES */
-.footerColumn span{
-    margin-right: 8px;
+.footer-column p:hover{
+    color: #EAF3FF;
 }
 
-/* LINHA */
-.footerLine{
+.footer-line {
     border: none;
     height: 1px;
-    background-color: rgba(255,255,255,0.2);
-    margin-top: 20px;
+    background: rgba(255, 255, 255, .25);
+    margin-top: 18px;
+}
+
+
+
+
+/* =========================
+      MODO ESCURO
+========================= */
+body.dark header{
+    background: #2B2B2B;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .25);
+}
+
+body.dark .logo img{
+    filter: brightness(0.95);
+}
+
+body.dark .nav-links a{
+    color: #F5F5F5;
+    transition: .3s;
+}
+
+body.dark .nav-links a:hover{
+    color: #8FAE9E;
+}
+
+body.dark .access-button button{
+    background: #505050;
+    color: #F5F5F5;
+    border: 1px solid #666;
+}
+
+body.dark .access-button button:hover{
+    background: #606060;
+    color: #8FAE9E;
+}
+
+body.dark .conteiner-footer{
+    background: #2B2B2B;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #ffffff;
 }

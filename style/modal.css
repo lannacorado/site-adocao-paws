@@ -1,0 +1,381 @@
+.modal{
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 40, 0.55);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content{
+    width: min(160vw, 1200px);
+    max-height: 92vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 28px;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0,0,0,.22);
+}
+
+.modal-close{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background:#91967F;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.modal-close:hover{
+    background: #AEB39C;
+    transform: translateY(-1px);
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.modal-body .modal-card-info{
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.3fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.modal-body .pet-info .import,
+.modal-body .pet-info .formu-info{
+    background: #f6f6f6;
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.pet-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 8px; 
+    width: 100%;
+    max-width: 1200px; 
+    min-width: 950px;  
+    padding: 20px;
+    gap: 55px;         
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.info-esquerda{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+    width: 16%;        /* Diminuímos de 30% para 25%, já que a foto é menor */
+    min-width:260px;
+    padding: 10px;           
+    box-sizing: border-box;
+}
+
+.info-esquerda img{
+    width: 100%;            
+    max-width: 280px;
+    height: auto;
+    border-radius: 16px;    
+}
+
+.info-esquerda h2{
+    font-size: 22px;         
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #2F4055;
+}
+
+.info-esquerda p{
+    font-size: 13px;
+    color: #666666;
+    margin: 0 0 10px 0;
+    color:#3F536B;
+}
+
+.card-caract{
+    display: flex;
+    flex-direction: row;   
+    justify-content: center; 
+    align-items: center;
+    gap: 8px;                
+    flex-wrap: wrap;   
+    padding: 10px 0;
+    margin: 5px;
+}
+
+.caract-info{
+    background-color:#ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;             
+    height: 30px;            
+    padding: 0 5px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05); 
+    border: 1px solid #e0e0e0;
+}
+
+.caract-info p{
+    font-size: 11px;         
+    font-weight: 500;
+    margin: 0;
+    color:#3F536B;
+}
+
+.info-direita{
+    display: flex;
+    flex-direction: column;   
+    align-items: flex-start;  
+    width: 90%;        /* Aumentamos de 65% para 72%! Agora os textos vão respirar */
+    padding:10px 10px 10px 0;    
+    box-sizing: border-box;
+}
+
+.info-direita h2{
+    font-size: 22px;          
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #2F4055;
+}
+
+.info-direita p{
+    font-size: 13.5px;        
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+    color:#3F536B;
+}
+
+.modal-card-info{
+    display: flex;
+    flex-direction: row;   
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;               
+    flex-wrap: wrap;   
+    padding: 10px 0;
+    width: 100%;
+}
+
+.info{
+    background-color: #ffffff; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 110px;            
+    height: 110px;           
+    padding: 10px;
+    border-radius: 8px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+    box-sizing: border-box;
+}
+
+.card-info img{
+    width: 40px;             
+    height: auto;
+}
+
+.card-info p{
+    margin-top: 6px;
+    font-size: 11px;         
+    font-weight: 500;
+    text-align: center;
+    color:#3F536B;
+}
+
+.import{
+    width: 100%;             
+    background: linear-gradient(135deg, #8FA8C4 0%, #839CB5 60%, #738EAD 100%);
+    border-radius: 8px;    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+    margin: 15px 0;
+    padding: 20px;     /* Aumentamos o padding interno para ficar mais elegante */
+    box-sizing: border-box;
+}
+
+.import-titulo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+.import-titulo h3{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    color: #2F4055;
+}
+
+.import-titulo img{
+    width: 24px;
+    height: auto;
+}
+
+.container-import{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.import-info{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.import-info img{
+    width: 24px;
+    height: auto;
+    flex-shrink: 0;        
+}
+
+.import-info p{
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+    word-break: break-word;  
+    color:#3F536B;
+}
+
+.formu-info{
+    background-color: #f4b0cd;
+    width: 100%;             
+    display: flex;
+    flex-direction: row;     
+    justify-content: space-between;
+    align-items: center;     
+    gap: 20px;                 
+    padding: 30px;           
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+    box-sizing: border-box;
+}
+
+.formu-info img{
+    width: 70px;             
+    height: auto;
+}
+
+.formu-titulo{
+    flex: 1;
+}
+
+.formu-titulo h2{
+    font-size: 18px;         
+    font-weight: 700;
+    margin: 0;
+    padding-bottom: 4px;
+    color: #2F4055;
+}
+
+.formu-titulo p{
+    font-size: 12px;         
+    margin: 0;
+    color:#3F536B;
+}
+
+.formu-button a{
+    display: flex;
+    align-items: center;
+    width: 150px;            
+    height: 65px;            
+    background-color: #91967F;
+    color:  #2F4055;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 10px;         
+    transition: 0.3s;
+}
+
+.formu-button :hover{
+    transform: translateY(-2px);
+    background-color: #AEB39C;
+}
+
+
+
+
+
+/* =========================
+   MODO ESCURO - MODAL (CORRETO)
+========================= */
+
+body.dark .modal-content{
+    color: #FFFFFF;
+}
+
+/* textos (sem background aqui!) */
+body.dark .info-esquerda h2,
+body.dark .info-direita h2,
+body.dark .import-titulo h3,
+body.dark .formu-titulo h2{
+    color: #FFFFFF;
+    background: #2A2A2A;
+    border-radius: 10px;
+}
+
+body.dark .info-esquerda p,
+body.dark .info-direita p,
+body.dark .card-info p,
+body.dark .import-info p,
+body.dark .formu-titulo p{
+    color: #FFFFFF;
+    background: #2A2A2A;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+body.dark .modal-body .pet-info .import,
+body.dark .modal-body .pet-info .formu-info{
+    background: #2A2A2A;
+}
+
+/* botão */
+body.dark .formu-button a{
+    background: #000;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+/* botão fechar no modo escuro */
+body.dark .modal-close{
+    background: #2A2A2A;
+    color: #ffffff;
+}
