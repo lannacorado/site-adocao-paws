@@ -11,8 +11,9 @@ O projeto foi desenvolvido como atividade acadêmica/prática para aprimorar con
 ## 🚀 Tecnologias Utilizadas
 
 - HTML
-- VScode
+- CSS
 - JS
+- VScode
 - Git e GitHub
 
 ---
