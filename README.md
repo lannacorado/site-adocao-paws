@@ -12,6 +12,7 @@ O projeto foi desenvolvido como atividade acadêmica/prática para aprimorar con
 
 - HTML
 - VScode
+- JS
 - Git e GitHub
 
 ---
@@ -22,19 +23,10 @@ O projeto foi desenvolvido como atividade acadêmica/prática para aprimorar con
 - Formulário de adoção
 - Área de contato
 - Header e Footer personalizados
-- Layout inspirado em protótipo do Figma
-
----
-
-## ⚠️ Status do Projeto
-O projeto ainda não está finalizado.
-Futuramente serão realizadas novas melhorias, correções e implementações de funcionalidades para aprimorar a plataforma e torná-la mais completa, responsiva e funcional.
 
 ---
 
 ## Links
-- [Protótipo do Figma](https://www.figma.com/proto/T9vnGpSmBJyLbOcVaKE4ZD/Patas?node-id=83-13&t=YWQlQtzActUkNkhJ-1)
-- [Video explicativo do projeto](https://drive.google.com/file/d/1k-gL1f8hm-E4BGwo48dFcfDCL8RfXa95/view?usp=sharing)
 - [Github pages]( https://lannacorado.github.io/site-adocao-paws/)
 
 ---
