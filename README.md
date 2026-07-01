@@ -32,5 +32,5 @@ O projeto foi desenvolvido como atividade acadêmica/prática para aprimorar con
 ---
 
 ## 👨‍💻 Desenvolvido por
-Ilanna Karolyna Corado
-Ana Cecília
+-Ilanna Karolyna Corado
+-Ana Cecília
